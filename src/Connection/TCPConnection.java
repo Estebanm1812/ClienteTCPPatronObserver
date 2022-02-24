@@ -19,7 +19,7 @@ import Events.OnRTTReceiberListener;
 
 public class TCPConnection extends Thread {
 
-	private String ip = "8.tcp.ngrok.io";
+	private String ip = "127.0.0.1";
 
 	private Socket socket;
 
@@ -42,7 +42,7 @@ public class TCPConnection extends Thread {
 
 		try {
 			
-			socket = new Socket(ip, 17314);
+			socket = new Socket(ip, 6000);
 			// connection.Connected();
 
 			OutputStream os = socket.getOutputStream();

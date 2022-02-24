@@ -88,7 +88,7 @@ public class Main implements OnAnswerListener, OnConnectionListener, OnRTTListen
 				
 			long finaltime = endTime - beginTime;
 			
-			System.out.println("El tiempo que le tomo fue: " + finaltime + " nanosegundos");
+			System.out.println("El tiempo que le tomo fue: " + finaltime + " Milisegundos");
 			endTime = 0;
 			beginTime = 0;
 			
@@ -99,7 +99,7 @@ public class Main implements OnAnswerListener, OnConnectionListener, OnRTTListen
 			
 			//System.out.println(finaltime);
 			
-			double convert = (double) finaltime / 1_000_000_000;
+			double convert = (double) finaltime / 1000;
 			
 			//System.out.println(convert);
 			
@@ -108,13 +108,13 @@ public class Main implements OnAnswerListener, OnConnectionListener, OnRTTListen
 			
 			if(convert==0) {
 				
-				System.out.println("La velocidad fue de: " + "0 Kb/s");
+				System.out.println("La velocidad fue de: " + "0 KB/s");
 				
 			}else {
 				
 				double speed = 8192/convert;
 				
-				System.out.println("La velocidad fue de: " + speed + " Kb/s");
+				System.out.println("La velocidad fue de: " + speed + " KB/s");
 				
 			}
 			
