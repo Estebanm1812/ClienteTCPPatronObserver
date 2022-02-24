@@ -99,7 +99,7 @@ public class Main implements OnAnswerListener, OnConnectionListener, OnRTTListen
 			
 			//System.out.println(finaltime);
 			
-			double convert = (double) finaltime / 1000;
+			double convert = (double) finaltime / 1000000;
 			
 			//System.out.println(convert);
 			
@@ -112,7 +112,7 @@ public class Main implements OnAnswerListener, OnConnectionListener, OnRTTListen
 				
 			}else {
 				
-				double speed = 8192/convert;
+				double speed = 8/convert;
 				
 				System.out.println("La velocidad fue de: " + speed + " KB/s");
 				
@@ -135,7 +135,7 @@ public class Main implements OnAnswerListener, OnConnectionListener, OnRTTListen
 	@Override
 	public void onNotificationSend() {
 		
-		beginTime = System.currentTimeMillis();
+		beginTime = System.nanoTime();
 		
 			
 		
@@ -146,7 +146,7 @@ public class Main implements OnAnswerListener, OnConnectionListener, OnRTTListen
 	@Override
 	public void onMessageReceived() {
 	
-		endTime = System.currentTimeMillis();
+		endTime = System.nanoTime();
 		
 	}
 
