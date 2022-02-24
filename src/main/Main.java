@@ -88,7 +88,7 @@ public class Main implements OnAnswerListener, OnConnectionListener, OnRTTListen
 				
 			long finaltime = endTime - beginTime;
 			
-			System.out.println("El tiempo que le tomo fue: " + finaltime + " Milisegundos");
+			System.out.println("El tiempo que le tomo fue: " + finaltime + " NanoSegundos");
 			endTime = 0;
 			beginTime = 0;
 			
@@ -99,7 +99,7 @@ public class Main implements OnAnswerListener, OnConnectionListener, OnRTTListen
 			
 			//System.out.println(finaltime);
 			
-			double convert = (double) finaltime / 1000000;
+			double convert = (double) finaltime / 1000000000;
 			
 			//System.out.println(convert);
 			
